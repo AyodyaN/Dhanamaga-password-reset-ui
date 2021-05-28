@@ -78,7 +78,7 @@ function App() {
         passwordConfirmation: confirmPassword,
       }
       
-      axios.post(`http://localhost:1337/auth/reset-password`, resetObject)
+      axios.post(`http://139.59.106.255:1337/auth/reset-password`, resetObject)
       .then(response => {
         matchResponse(response);
         checkResponse(true);
