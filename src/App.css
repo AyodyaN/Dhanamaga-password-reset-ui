@@ -1,31 +1,246 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  color: #97cb4f;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  width: auto;
+  padding-top: 2vmin;
+  height: 12vmin;
+  background-color: #1b2063;
+  text-align: center;
+}
+
+.footer {
+  width: auto;
+  padding-top: 1vmin;
+  height: 11vmin;
+  background-color: #1b2063;
+  color: #ffffff;
+  text-align: center;
+}
+
+.App-body {
+  background-color: #ffffff;
+  min-height: 74vh;
   display: flex;
   flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.reset-panel {
+  width: auto;
+  height: 40vmin;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.reset-form {
+  padding: 3%;
+  border: 1px solid #1b2063;
+  border-radius: 10px;
+}
+
+.new-password {
+  height: 5vmin;
+  font-size: calc(5px + 2vmin);
+  width: 40vmin;
+  padding-left: 2vmin;
+  border-width: 1px;
+  border-top: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+  border-bottom: 1px solid #bdbbbb;
+  border-left: 1px solid #bdbbbb;
+  letter-spacing: 2px;
+}
+
+.new-password:hover {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);  
+}
+
+.new-password:focus {
+  outline: none;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);  
+}
+
+#input-1 {
+  margin-bottom: 1vmin;
+}
+
+#input-2 {
+  margin-top: 1vmin;
+}
+
+::placeholder {
+  letter-spacing: 1px;
+  font-size: medium;
+  color: #bdbbbb;
+}
+
+.reset-button {
+  margin-top: 5vmin;
+  color:#1b2063;
+  font-size: calc(8px + 1vmin);
+  border-style:solid;
+  border-color:#1b2063;
+  border-width:1px 1px;
+  display:inline-block;
+  background:#ffffff;
+  border-radius: 10px;
+  font-family:'comic sans ms', 'marker felt-thin', arial, sans-serif;
+  font-weight:bold;
+  font-style:normal;
+  width: 100%;
+  padding: 4% 8%;
+  text-align:center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.reset-button:hover {
+  color:#ffffff;
+  background:#1b2063;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.reset-button:disabled {
+  pointer-events: none;
 }
 
 .App-link {
-  color: #61dafb;
+  text-decoration: none;
+}
+
+a {
+  color: #97cb4f;
+  text-decoration: none;
+}
+
+.App-copyright {
+  font-size: small;
+}
+
+.info-label {
+  font-size: small;
+  color: red;
+}
+
+.error-message {
+  padding-top: 5vmin;
+  color: red
+}
+
+.success-message {
+  text-align: center;
+}
+
+@media only screen and (max-width: 2766px) {
+  .App-link {
+    font-size: large;
+  }
+
+  .App-copyright {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .App-body {
+    min-height: 80vh;
+  }
+
+  .new-password {
+    height: 5vmin;
+  }
+
+  .App-copyright {
+    font-size: x-small;
+  }
+
+  .App-link {
+    font-size: large;
+  }
+
+  .App-copyright {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  h2 {
+    font-size: large;
+  }
+
+  .App-body {
+    min-height: 75vh;
+  }
+
+  .footer {
+    height: 10vmin;
+  }
+
+  ::placeholder {
+    font-size: x-small;
+  }
+}
+
+@media only screen and (max-width: 822px) {
+  h2 {
+    font-size: large;
+  }
+
+  .App-body {
+    min-height: 79.7vh;
+  }
+
+  .header {
+    height: 18vmin;
+    margin-bottom: 2vmin;
+  }
+  
+  .footer {
+    height: 21vmin;
+  }
+
+  .App-logo {
+    height: 15vmin;
+  }
+
+  .reset-panel {
+    height: 60vmin;
+  }
+
+  .reset-form {
+    padding: 7%;
+  }
+  
+  .new-password {
+    height: 8vmin;
+    width: auto;
+  }
+
+  .App-link {
+    font-size: small;
+  }
+
+  .App-copyright {
+    font-size: x-small;
+  }
+
+  ::placeholder {
+    font-size: x-small;
+  }
+
 }
 
 @keyframes App-logo-spin {
