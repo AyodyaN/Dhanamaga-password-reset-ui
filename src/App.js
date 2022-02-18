@@ -78,7 +78,7 @@ function App() {
         passwordConfirmation: confirmPassword,
       }
       
-      axios.post(`http://3.108.106.64:1337/auth/reset-password`, resetObject)
+      axios.post(`http://${process.env.REACT_APP_API_URL}:${process.env.REACT_APP_PORT}/auth/reset-password`, resetObject)
       .then(response => {
         matchResponse(response);
         checkResponse(true);
