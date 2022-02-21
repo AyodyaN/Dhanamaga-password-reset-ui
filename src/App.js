@@ -2,6 +2,11 @@ import headerLogo from './images/danamaga.png';
 import './App.css';
 import React from 'react';
 import axios from 'axios';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function Welcome() {
   return (
@@ -38,7 +43,7 @@ function Footer() {
   );
 }
 
-function App() {
+function ResetPassword() {
   let [token, setTokenData] = React.useState('');
   let [password, setPasswordData] = React.useState('');
   let [confirmPassword, setConfirmPasswordData] = React.useState('');
@@ -110,6 +115,16 @@ function App() {
       </div>
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+        <Routes>
+          <Route exact path="/reset-password" element={<ResetPassword/>}/>
+        </Routes>
+    </Router>
   );
 }
 
